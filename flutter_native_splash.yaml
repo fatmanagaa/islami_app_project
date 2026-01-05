@@ -1,0 +1,19 @@
+flutter_native_splash:
+  # required
+  color: "#FFFFFF"
+
+  # ❌ متحطيش background_image مع color + image
+  # background_image: assets/images/Splash Screen.png
+
+  image: assets/images/splash_logo.png
+
+  fullscreen: true
+
+  android_12:
+    color: "#202020"
+    image: assets/images/splash_logo.png
+    icon_background_color: "#202020"
+
+    branding: assets/images/splash_branding.png
+
+  web: false
