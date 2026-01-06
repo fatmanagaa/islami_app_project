@@ -2,7 +2,7 @@ flutter_native_splash:
   # required
   color: "#FFFFFF"
 
-  # ❌ متحطيش background_image مع color + image
+
   # background_image: assets/images/Splash Screen.png
 
   image: assets/images/splash_logo.png
