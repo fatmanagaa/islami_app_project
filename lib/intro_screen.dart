@@ -65,10 +65,9 @@ class IntroScreen extends StatelessWidget {
         color: Colors.black26,
         spacing: const EdgeInsets.symmetric(horizontal: 3.0),
         activeShape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(25.0)
+          borderRadius: BorderRadius.circular(25.0),
         ),
       ),
-
 
       globalHeader: Image.asset('assets/images/islami_top.png'),
       bodyPadding: EdgeInsets.only(top: 266),
@@ -76,15 +75,12 @@ class IntroScreen extends StatelessWidget {
       globalBackgroundColor: AppColors.black,
       showSkipButton: true,
       skip: Text('skip', style: AppStyles.bodyStyle),
-      onSkip: (){
-
-      }
-      ,
+      onSkip: () {},
       showNextButton: true,
       next: Text('Next', style: AppStyles.bodyStyle),
 
       showBackButton: true,
-      back: Text('Back',style: AppStyles.bodyStyle,),
+      back: Text('Back', style: AppStyles.bodyStyle),
       showDoneButton: true,
       done: Text("Done", style: AppStyles.bodyStyle),
       onDone: () {
