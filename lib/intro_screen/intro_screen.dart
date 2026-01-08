@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:introduction_screen/introduction_screen.dart';
 import 'package:islami_app/core/app_colors.dart';
 import 'package:islami_app/core/app_styles.dart';
+import 'package:islami_app/home_screen/home_screen.dart';
 
 class IntroScreen extends StatelessWidget {
   static const String routeName = 'intro';
@@ -84,7 +85,9 @@ class IntroScreen extends StatelessWidget {
       showDoneButton: true,
       done: Text("Done", style: AppStyles.bodyStyle),
       onDone: () {
-        // On button pressed
+        Navigator.pushReplacementNamed(context,HomeScreen.routeName );
+
+
       },
     );
   }
