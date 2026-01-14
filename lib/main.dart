@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:islami_app/core/app_theme.dart';
-import 'package:islami_app/home_screen/home_screen.dart';
+import 'package:islami_app/home/home_screen.dart';
 import 'package:islami_app/intro_screen/intro_screen.dart';
+
+import 'home/home_screen.dart';
 
 void main() {
   runApp(const MyApp());
