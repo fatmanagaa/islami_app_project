@@ -81,7 +81,13 @@ class QuranTab extends StatelessWidget {
                 return SuraItemWidget(index: index,);
               },
               separatorBuilder: (context, index) {
-                return SizedBox();
+                return Padding(
+                  padding: const EdgeInsets.all(10),
+                  child: Divider(
+                    color: AppColors.white,
+                    thickness: 2,
+                  ),
+                );
               },
               itemCount: 114,
             ),
