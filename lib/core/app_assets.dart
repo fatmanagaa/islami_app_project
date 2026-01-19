@@ -13,6 +13,9 @@ class AppAssets {
   static const String quranSearch=  'assets/images/quran-search.png';
   static const String mostRecently=  'assets/images/img_most_recent.png';
   static const String vector=  'assets/images/img_sur_number_frame.png';
+  static const String cornerLeft=  'assets/images/img_left_corner.png';
+  static const String cornerRight=  'assets/images/img_right_corner.png';
+  static const String mosque=  'assets/images/img_bottom_decoration.png';
 
 
 }

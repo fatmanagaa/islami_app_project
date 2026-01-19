@@ -39,6 +39,16 @@ static TextStyle bold14Black = GoogleFonts.elMessiri(
     fontSize: 14,
     color: AppColors.white,
   );
+  static TextStyle bold20Primary = GoogleFonts.elMessiri(
+    fontWeight: FontWeight.bold,
+    fontSize: 20,
+    color: AppColors.primary,);
+
+  static TextStyle bold24Primary = GoogleFonts.elMessiri(
+    fontWeight: FontWeight.bold,
+    fontSize: 24,
+    color: AppColors.primary,
+  );
 
 
 
