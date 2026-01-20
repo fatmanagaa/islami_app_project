@@ -143,7 +143,6 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
             ),
             body: Column(
-
               children: [
                 Image.asset(AppAssets.logo),
 

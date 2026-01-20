@@ -80,19 +80,19 @@ class QuranTab extends StatelessWidget {
             child: ListView.separated(
               itemBuilder: (context, index) {
                 return InkWell(
-                  onTap: (){
-                    Navigator.of(context).pushNamed(AppRoutes.suraDetailsRouteName,arguments: index);
+                  onTap: () {
+                    Navigator.of(context).pushNamed(
+                      AppRoutes.suraDetailsRouteName,
+                      arguments: index,
+                    );
                   },
-                    child
-                    : SuraItemWidget(index: index,));
+                  child: SuraItemWidget(index: index),
+                );
               },
               separatorBuilder: (context, index) {
                 return Padding(
                   padding: const EdgeInsets.all(10),
-                  child: Divider(
-                    color: AppColors.white,
-                    thickness: 2,
-                  ),
+                  child: Divider(color: AppColors.white, thickness: 2),
                 );
               },
               itemCount: 114,

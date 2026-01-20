@@ -87,9 +87,7 @@ class IntroScreen extends StatelessWidget {
       showDoneButton: true,
       done: Text("Done", style: AppStyles.bodyStyle),
       onDone: () {
-        Navigator.pushReplacementNamed(context,HomeScreen.routeName );
-
-
+        Navigator.pushReplacementNamed(context, HomeScreen.routeName);
       },
     );
   }
