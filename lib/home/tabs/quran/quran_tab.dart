@@ -75,7 +75,7 @@ class QuranTab extends StatelessWidget {
               itemCount: 10,
             ),
           ),
-          Text('Suras List', style: AppStyles.bold16White),
+          Text('suras List', style: AppStyles.bold16White),
           Expanded(
             child: ListView.separated(
               itemBuilder: (context, index) {
