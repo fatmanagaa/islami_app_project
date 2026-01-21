@@ -1,0 +1,7 @@
+class AppRoutes {
+  static const String homeRouteName = 'home';
+  static const String introRouteName = 'intro';
+  static const String suraDetailsRouteName = 'suraDetailsScreen';
+
+
+}

@@ -2,6 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:introduction_screen/introduction_screen.dart';
 import 'package:islami_app/core/app_colors.dart';
 import 'package:islami_app/core/app_styles.dart';
+import 'package:islami_app/core/cache_helper.dart';
+import 'package:islami_app/home/home_screen.dart';
+
+import '../home/home_screen.dart';
 
 class IntroScreen extends StatelessWidget {
   static const String routeName = 'intro';
@@ -75,7 +79,10 @@ class IntroScreen extends StatelessWidget {
       globalBackgroundColor: AppColors.black,
       showSkipButton: true,
       skip: Text('skip', style: AppStyles.bodyStyle),
-      onSkip: () {},
+      onSkip: () async {
+        Navigator.pushReplacementNamed(context, HomeScreen.routeName);
+        await CacheHelper.setBool(true);
+      },
       showNextButton: true,
       next: Text('Next', style: AppStyles.bodyStyle),
 
@@ -83,8 +90,9 @@ class IntroScreen extends StatelessWidget {
       back: Text('Back', style: AppStyles.bodyStyle),
       showDoneButton: true,
       done: Text("Done", style: AppStyles.bodyStyle),
-      onDone: () {
-        // On button pressed
+      onDone: () async {
+        Navigator.pushReplacementNamed(context, HomeScreen.routeName);
+        await CacheHelper.setBool(true);
       },
     );
   }
