@@ -5,6 +5,7 @@ import 'package:islami_app/core/app_styles.dart';
 import 'package:islami_app/model/quran_resources.dart';
 import 'package:flutter/services.dart';
 
+
 class SuraDetailsScreen extends StatefulWidget {
   SuraDetailsScreen({super.key});
 
@@ -55,7 +56,7 @@ class _SuraDetailsScreenState extends State<SuraDetailsScreen> {
                     return Center(
                       child: Text(
                         verses[index],
-                        style: AppStyles.bodyStyle,
+                        style: AppStyles.bold20Primary,
                         textAlign: TextAlign.center,
                       ),
                     );
