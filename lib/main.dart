@@ -8,7 +8,9 @@ import 'package:islami_app/intro_screen/intro_screen.dart';
 
 import 'home/home_screen.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await CacheHelper.init();
   runApp(const MyApp());
 }
 
@@ -20,7 +22,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: IntroScreen(),
-      initialRoute: CacheHelper.getBool('introduction screen')==true
+      initialRoute: CacheHelper.getBool('introduction screen') == true
           ? HomeScreen.routeName
           : IntroScreen.routeName,
       //todo:shared prefrences
