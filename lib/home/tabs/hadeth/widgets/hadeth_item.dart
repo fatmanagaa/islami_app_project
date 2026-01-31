@@ -26,32 +26,27 @@ class _HadethItemState extends State<HadethItem> {
     loadHadethFile(widget.index);
   }
   Future<void> loadHadethFile(int index) async {
+    try {
+      String fileContent = await rootBundle.loadString(
+          'assets/files/hadeeth${index + 1}.txt'
 
-    String fileContent = await rootBundle.loadString(
-      'assets/files/hadeeth$index.txt',
-    );
-    List<String> hadeethlines = fileContent.split("\n");
-    String title= hadeethlines[0];
-    String content='';
-    for(int i=0;i<hadeethlines.length;i++){
-      content+=hadeethlines[i];
+      );
 
+      List<String> lines = fileContent.split('\n');
+
+      String title = lines[0];
+      String content = '';
+
+      for (int i = 1; i < lines.length; i++) {
+        content += lines[i] + '\n';
+      }
+
+      setState(() {
+        hadeth = Hadeth(title: title, content: content);
+      });
+    } catch (e) {
+      print('ERROR LOADING HADETH: $e');
     }
-    Hadeth(title: title, content: content);
-    await Future.delayed(Duration(seconds: 1));
-    setState(() {
-      hadeth=Hadeth(title: title, content: content);
-
-    });
-
-    // another way do the same
-    // int fileIndex=fileContent.indexOf('/n');
-    // String title=fileContent.substring(0,fileIndex);
-    // // String content=fileContent.substring(fileIndex+1);
-    // Hadeth(title: '', content: '');
-
-
-
   }
 
   @override
@@ -73,8 +68,8 @@ class _HadethItemState extends State<HadethItem> {
       Column(
         children: [
           Text(hadeth?.title??'',style: AppStyles.bold24Black,),
-          Text(hadeth?.content??'',style: AppStyles.bold16Black,),
-
+          Expanded(child: SingleChildScrollView(child: Text(hadeth?.content??'',style: AppStyles.bold16Black,))),
+      
         ],
       ),
     );

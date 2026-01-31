@@ -39,6 +39,7 @@ dependencies:
   google_fonts: ^7.0.2
   shared_preferences: ^2.5.4
   carousel_slider: ^5.1.1
+  easy_localization: ^3.0.8
 
 dev_dependencies:
   flutter_test:
@@ -66,6 +67,11 @@ flutter:
   assets:
     - assets/images/
     - assets/files/quran/suras/
+    - assets/files/Hadeeth/Hadeeth/
+    - assets/files/
+    - assets/translations/
+
+
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
